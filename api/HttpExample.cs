@@ -5,7 +5,8 @@ namespace dotnet_isolated_60
     using System.Net;
     using System.Threading.Tasks;
     using System.Web;
-    using System.Web.Extensions;
+    using System.Web.Script;
+    using System.Web.Script.Serialization;
     using Microsoft.Azure.Functions.Worker;
 
     using Microsoft.Azure.Functions.Worker.Http;
