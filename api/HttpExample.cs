@@ -4,7 +4,7 @@ namespace dotnet_isolated_60
     using System.Linq;
     using System.Net;
     using System.Threading.Tasks;
-    using Newtonsoft.Json;
+  
     using Microsoft.Azure.Functions.Worker;
 
     using Microsoft.Azure.Functions.Worker.Http;
@@ -19,8 +19,8 @@ namespace dotnet_isolated_60
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post")] HttpRequestData req,
             FunctionContext executionContext)
         {
-            
-            var str = JsonConvert.SerializeObject("hello from the API");
+            JavaScriptSerializer js = new JavaScriptSerializer();
+            var str = js.Serialize("hello from the API");
             var response = req.CreateResponse(HttpStatusCode.OK);
             response.Headers.Add("Content-Type", "text/plain; charset=utf-8");
 
