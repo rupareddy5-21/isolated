@@ -19,10 +19,12 @@ namespace dotnet_isolated_60
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post")] HttpRequestData req,
             FunctionContext executionContext)
         {
+            
+            var str = JsonConvert.SerializeObject("hello from the API");
             var response = req.CreateResponse(HttpStatusCode.OK);
             response.Headers.Add("Content-Type", "text/plain; charset=utf-8");
 
-            response.WriteString("Hello from the API");
+            response.WriteString(str);
             return response;
         }
     }
