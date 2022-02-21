@@ -22,7 +22,7 @@ namespace dotnet_isolated_60
             var response = req.CreateResponse(HttpStatusCode.OK);
             response.Headers.Add("Content-Type", "text/plain; charset=utf-8");
 
-            response.WriteString("Hello from the API);
+            response.WriteString("Hello from the API");
             return response;
         }
     }
