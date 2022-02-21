@@ -4,7 +4,7 @@ namespace dotnet_isolated_60
     using System.Linq;
     using System.Net;
     using System.Threading.Tasks;
-
+    using Newtonsoft.Json;
     using Microsoft.Azure.Functions.Worker;
 
     using Microsoft.Azure.Functions.Worker.Http;
