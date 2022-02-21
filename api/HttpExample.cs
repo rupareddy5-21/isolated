@@ -4,7 +4,8 @@ namespace dotnet_isolated_60
     using System.Linq;
     using System.Net;
     using System.Threading.Tasks;
-  
+    using System.Web;
+    using System.Web.Extensions;
     using Microsoft.Azure.Functions.Worker;
 
     using Microsoft.Azure.Functions.Worker.Http;
